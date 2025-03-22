@@ -53,6 +53,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build # or dist, depending on your build output folder
+          folder: dist
           branch: gh-pages
           target-folder: pr-preview-${{ github.event.pull_request.number }}
