@@ -341,15 +341,15 @@
   <!-- cart page -->
   <template id="cart">
     <section class="cart-page page">
-      <div class="link-navigation" aria-label="Breadcrumb">
+      <nav class="link-navigation" aria-label="Breadcrumb">
         <a  aria-label="Catalog"  class="link-navigation__link " href="/catalog">Catalog</a>
-        <span class="link-navigation__slash"> / </span>
+        <span class="link-navigation__slash" aria-hidden="true"> / </span>
         <a class="link-navigation__link" href="/cart">Cart</a>
-      </div>
+      </nav>
       <h2 class="page-title">Cart</h2>
-      <div class="cart-page__container" aria-labelledby="cart-title" aria-live="polite">
+        <section class="cart-page__container" aria-labelledby="cart-title" aria-live="polite">
 
-      </div>
+      </section>
     </section>
   </template>
       <!-- empty cart page -->

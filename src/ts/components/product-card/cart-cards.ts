@@ -42,7 +42,7 @@ class CartCard {
       getExistentElement('.product__photo', card).style.backgroundImage = `url('assets/img/${this.plant.thumbnail}')`;
       getExistentElement('.cart-list__number', card).innerText = this.number.toString();
       getExistentElement('.product__rating', card).innerHTML =
-          this.plant.rating.toString() + '<span aria-hidden="true">&#9734;</span>';
+        this.plant.rating.toString() + '<span aria-hidden="true">&#9734;</span>';
       getExistentElement('.product__type', card).innerText = this.plant.type;
       getExistentElement('.product__title', card).innerText = this.plant.title;
       getExistentElement('.product__description', card).innerHTML = this.plant.description.toString();
