@@ -61,6 +61,7 @@ class Cart {
     const amount = document.getElementById('header-amount');
     const sum = document.getElementById('header-sum');
     this.showProductAmount(amount);
+    if (amount) amount.ariaLabel = `Shopping cart, ${sum} items`;
     this.showProductSum(sum);
   }
 
