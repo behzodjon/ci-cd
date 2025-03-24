@@ -41,8 +41,8 @@
   }
 
   input[type='range']::-webkit-slider-thumb {
-    width: 48px;
-    height: 48px;
+    width: 26px;
+    height: 26px;
     border-radius: 8px;
     background: variables.$green-medium;
     pointer-events: auto;
