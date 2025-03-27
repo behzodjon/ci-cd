@@ -41,7 +41,8 @@ class CartCard {
       getExistentElement('.cart-list__item', card).id = this.id;
       getExistentElement('.product__photo', card).style.backgroundImage = `url('assets/img/${this.plant.thumbnail}')`;
       getExistentElement('.cart-list__number', card).innerText = this.number.toString();
-      getExistentElement('.product__rating', card).innerHTML = this.plant.rating.toString() + '<span>&#9734;</span>';
+      getExistentElement('.product__rating', card).innerHTML =
+        this.plant.rating.toString() + '<span aria-hidden="true">&#9734;</span>';
       getExistentElement('.product__type', card).innerText = this.plant.type;
       getExistentElement('.product__title', card).innerText = this.plant.title;
       getExistentElement('.product__description', card).innerHTML = this.plant.description.toString();
@@ -62,7 +63,7 @@ class CartCard {
       if (this.plant.sale > 0) {
         const round = document.createElement('div');
         round.classList.add('product__discount');
-        round.innerHTML = this.plant.sale.toString() + '<span> %</span>';
+        round.innerHTML = this.plant.sale.toString() + '<span aria-hidden="true"> %</span>';
         getExistentElement('.product__icons', card).prepend(round);
         const oldPriceValue = Math.ceil((this.plant.price * this.count) / ((100 - this.plant.sale) / 100));
         this.oldPriceContainer.innerHTML = '$' + oldPriceValue.toString();

@@ -31,6 +31,10 @@ class ProductCards {
 
       if (item.sale) {
         getExistentElement('.product__discount-num', productCardClone).textContent = item.sale.toString();
+        getExistentElement(
+          '.product__discount-num',
+          productCardClone
+        ).ariaLabel = `Discount ${item.sale.toString()} percent`;
         getExistentElement('.product__price', productCardClone).style.color = '#ab5abb';
       } else {
         getExistentElement('.product__discount', productCardClone).style.display = 'none';
